@@ -242,6 +242,7 @@ def main():
     plt.xscale('log')
     plt.xlabel('Threshold')
     plt.ylabel('Accuracy')
+    plt.savefig('plot1.png')
 
     f2 = plt.figure()
     ax2 = f2.add_subplot(111)
@@ -250,6 +251,7 @@ def main():
     plt.xscale('log')
     plt.xlabel('Threshold')
     plt.ylabel('Number of significant N-Grams')
+    plt.savefig('plot2.png')
 
     plt.show()
 
