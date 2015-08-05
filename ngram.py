@@ -211,7 +211,8 @@ def main():
     #ms = int(sys.argv[4])
     test_text_1 = sys.argv[4]
     test_text_2 = sys.argv[5]
-    min = 0.0001
+    min = float(sys.argv[6])
+    max = float(sys.argv[7])
     analysis = []
     plotthr = []
     plotpre = []
@@ -224,7 +225,7 @@ def main():
     #datatoprint = runprogram(text1,text2,n,test_text_1,test_text_2,min)
     #print 'N-grams:',n,'Precision:',datatoprint,'Threshold:',min
 
-    while min <= 0.001:
+    while min <= max:
         datatoprint,probtoprint1,probtoprint2 = runprogram(text1,text2,n,test_text_1,test_text_2,min)
         analysis.append((n,datatoprint,min))
         plotpre.append(datatoprint)
